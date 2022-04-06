@@ -6,7 +6,7 @@
 /*   By: aminoru- <aminoru-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 15:11:29 by aminoru-          #+#    #+#             */
-/*   Updated: 2022/04/06 20:08:16 by aminoru-         ###   ########.fr       */
+/*   Updated: 2022/04/06 21:41:52 by aminoru-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,6 @@ int		ft_isprint(int c);
 size_t	ft_strlen(const char *str);
 void	*ft_memset(void *ptr, int value, size_t num);
 void	ft_bzero(void *s, size_t n);
-void	*ft_memcpy(void *destination, const void *source, size_t num);
-void	*ft_memmove(void *destination, const void *source, size_t num);
+void	*ft_memmove(void *dest, const void *src, size_t num);
+void	*ft_memcpy(void *dest, const void *src, size_t num);
 #endif
