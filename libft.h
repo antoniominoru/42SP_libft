@@ -6,7 +6,7 @@
 /*   By: aminoru- <aminoru-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 15:11:29 by aminoru-          #+#    #+#             */
-/*   Updated: 2022/04/22 16:35:43 by aminoru-         ###   ########.fr       */
+/*   Updated: 2022/04/22 17:03:05 by aminoru-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,8 @@ char	*ft_strdup(const char *s1);
 // Part 2 functions
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strtrim(char const *s1, char const *set);
+
 // Bonus functions
 
 #endif
