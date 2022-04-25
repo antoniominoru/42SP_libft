@@ -6,7 +6,7 @@
 /*   By: aminoru- <aminoru-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 22:17:20 by aminoru-          #+#    #+#             */
-/*   Updated: 2022/04/25 22:20:47 by aminoru-         ###   ########.fr       */
+/*   Updated: 2022/04/25 22:30:10 by aminoru-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,9 @@ void	ft_putstr_fd(char *s, int fd)
 {
 	if (!s)
 		return ;
-	while (s++)
+	while (*s)
+	{
 		ft_putchar_fd(*s, fd);
+		s++;
+	}
 }
