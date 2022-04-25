@@ -6,7 +6,7 @@
 #    By: aminoru- <aminoru-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/05 16:30:03 by aminoru-          #+#    #+#              #
-#    Updated: 2022/04/25 22:42:50 by aminoru-         ###   ########.fr        #
+#    Updated: 2022/04/25 23:43:40 by aminoru-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,23 +23,32 @@ SRCS	=	ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c \
 			ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c  ft_putchar_fd.c \
 			ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
 
+SRCS_BONUS	= 
+
 OBJS	=	${SRCS:.c=.o}
+OBJS_BONUS	=	${SRCS_BONUS:.c=.o}
 
 all: 		${NAME}
 
 ${NAME}: 	${OBJS}
 				ar -rcs ${NAME} ${OBJS}
 				ranlib ${NAME}
-			
+
+bonus:	${NAME} ${OBJS_BONUS}
+				ar -rcs ${NAME} ${OBJS_BONUS}
+				ranlib ${NAME}
+
 .c.o:
 				${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 
 clean:
-				rm -f ${OBJS}
+				rm -f ${OBJS} ${OBJS_BONUS}
 
 fclean: 	clean
 				rm -f ${NAME}
 
 re: 		fclean all
 
-.PHONY: all clean fclean re
+rebonus:	fclean bonus
+
+.PHONY: all clean fclean re bonus rebonus
