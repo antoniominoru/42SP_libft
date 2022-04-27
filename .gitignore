@@ -2,4 +2,4 @@
 *.o
 *.a
 ./a.out
-./01_libft_tester/
+/01_libft_tester/
