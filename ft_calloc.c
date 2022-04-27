@@ -6,7 +6,7 @@
 /*   By: aminoru- <aminoru-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/20 15:47:01 by aminoru-          #+#    #+#             */
-/*   Updated: 2022/04/20 16:42:22 by aminoru-         ###   ########.fr       */
+/*   Updated: 2022/04/27 16:14:51 by aminoru-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,15 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	size_t	total_size;
 	void	*ptr;
+	int		total;
 
-	total_size = count * size;
-	ptr = malloc(total_size);
+	total = count * size;
+	if (total / count != size)
+		return (NULL);
+	ptr = malloc(total);
 	if (ptr == NULL)
 		return (NULL);
-	ft_bzero(ptr, total_size);
+	ft_bzero(ptr, (total));
 	return (ptr);
 }
