@@ -6,7 +6,7 @@
 /*   By: aminoru- <aminoru-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/20 20:54:23 by aminoru-          #+#    #+#             */
-/*   Updated: 2022/04/20 21:09:38 by aminoru-         ###   ########.fr       */
+/*   Updated: 2022/04/27 21:29:14 by aminoru-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ char	*ft_strdup(const char *s1)
 	int		size;
 	char	*ptr;
 
-	size = ft_strlen(s1) + 1;
-	ptr = malloc(size * sizeof(char));
+	size = ft_strlen((char *)s1);
+	ptr = malloc((size + 1) * sizeof(char));
 	if (ptr == NULL)
 		return (NULL);
 	ft_memcpy(ptr, s1, size);
